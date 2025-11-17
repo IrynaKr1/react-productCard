@@ -1,7 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { MdDelete } from 'react-icons/md';
+import { deleteProduct } from '../../store/slices/productSlice';
 
-function ProductList ({ products }) {
+function ProductList ({ products, deleteProductbyId }) {
   return (
     <ul>
       {products.map(p => (
@@ -13,6 +15,9 @@ function ProductList ({ products }) {
           <div>{p.productName}</div>
           <div>{p.producent}</div>
           <div>{p.price} zł</div>
+          <button onClick={() => deleteProductbyId(p.id)}>
+            <MdDelete />
+          </button>
         </li>
       ))}
     </ul>
@@ -23,4 +28,8 @@ const mapStateToProps = ({ productList }) => {
   return productList;
 };
 
-export default connect(mapStateToProps)(ProductList);
+const mapDispatchToProps = dispatch => ({
+  deleteProductbyId: id => dispatch(deleteProduct(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductList);
