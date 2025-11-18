@@ -43,13 +43,27 @@ const productSlice = createSlice({
     createProduct: (state, { payload }) => {
       state.products.push({ ...payload, isFavourite: false, id: uuidv4() });
     },
+    updateProduct: (state, { payload: { id, data } }) => {
+      const index = state.products.findIndex(p => p.id === id);
+      state.products[index] = {
+        ...state.products[index],
+        ...data,
+      };
+      console.log(data);
+    },
     deleteProduct: (state, { payload }) => {
       state.products = state.products.filter(c => c.id !== payload);
+    },
+    addToFavourite: (state, { payload }) => {
+      const choosenProduct = state.products.find(p => p.id === payload);
+      if (choosenProduct) {
+        choosenProduct.isFavourite = !choosenProduct.isFavourite;
+      }
     },
   },
 });
 
 const { reducer, actions } = productSlice;
 
-export const { deleteProduct, createProduct } = actions;
+export const { deleteProduct, createProduct, updateProduct, addToFavourite } = actions;
 export default reducer;
