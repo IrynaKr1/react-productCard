@@ -40,6 +40,9 @@ const productSlice = createSlice({
   initialState,
   name: 'products',
   reducers: {
+    createProduct: (state, { payload }) => {
+      state.products.push({ ...payload, isFavourite: false, id: uuidv4() });
+    },
     deleteProduct: (state, { payload }) => {
       state.products = state.products.filter(c => c.id !== payload);
     },
@@ -48,5 +51,5 @@ const productSlice = createSlice({
 
 const { reducer, actions } = productSlice;
 
-export const { deleteProduct } = actions;
+export const { deleteProduct, createProduct } = actions;
 export default reducer;

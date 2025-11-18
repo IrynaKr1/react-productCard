@@ -1,8 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import React from 'react';
 import { PRODUCT_VALIDATION_SCHEMA } from '../../utils/validationSchemas';
+import { connect } from 'react-redux';
+import { createProduct } from '../../store/slices/productSlice';
 
-function ProductForm () {
+function ProductForm ({ createNewProduct }) {
   const initialValues = {
     productName: '',
     producent: '',
@@ -13,7 +15,7 @@ function ProductForm () {
   };
 
   const submitHandler = (values, { resetForm }) => {
-    console.log('values', values);
+    createNewProduct(values);
     resetForm();
   };
 
@@ -63,4 +65,8 @@ function ProductForm () {
   );
 }
 
-export default ProductForm;
+const mapDispatchToProps = dispatch => ({
+  createNewProduct: data => dispatch(createProduct(data)),
+});
+
+export default connect(null, mapDispatchToProps)(ProductForm);
