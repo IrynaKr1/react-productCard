@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './ProductPhoto.module.scss';
 
-function ProductPhoto ({image, productName}) {
+function ProductPhoto ({ image, productName }) {
   return (
-    <div>
-      <img src={image} alt={productName} width='350px' />
+    <div className={styles.imgContainer}>
+      <img src={image} alt={productName} className={styles.img} />
     </div>
   );
 }
