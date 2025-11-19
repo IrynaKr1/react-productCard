@@ -23,6 +23,6 @@ export const PRODUCT_VALIDATION_SCHEMA = yup.object({
     .min(3, 'Category name must have a minimum of 3 characters.'),
   image: yup
     .string()
-    .required('Image URL obrazka is required')
+    .required('Image URL is required')
     .url('Add correct image URL'),
 });

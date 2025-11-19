@@ -43,14 +43,6 @@ const productSlice = createSlice({
     createProduct: (state, { payload }) => {
       state.products.push({ ...payload, isFavourite: false, id: uuidv4() });
     },
-    updateProduct: (state, { payload: { id, data } }) => {
-      const index = state.products.findIndex(p => p.id === id);
-      state.products[index] = {
-        ...state.products[index],
-        ...data,
-      };
-      console.log(data);
-    },
     deleteProduct: (state, { payload }) => {
       state.products = state.products.filter(c => c.id !== payload);
     },

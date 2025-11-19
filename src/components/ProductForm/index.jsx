@@ -50,7 +50,7 @@ function ProductForm ({ createNewProduct }) {
           </label>
           <label>
             Category:
-            <Field name='category' type='number' placeholder='Add category' />
+            <Field name='category' type='text' placeholder='Add category' />
             <ErrorMessage name='category' component='div' />
           </label>
           <label>

@@ -1,25 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
-import {
-  addToFavourite,
-  deleteProduct,
-  updateProduct,
-} from '../../store/slices/productSlice';
+import { addToFavourite, deleteProduct } from '../../store/slices/productSlice';
+import ProductPhoto from '../ProductPhoto';
 
-function ProductList ({
-  products,
-  deleteProductbyId,
-  updateProductbyId,
-  addToFavouriteById,
-}) {
+function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
   return (
     <ul>
       {products.map(p => (
         <li key={p.id}>
-          <div>
-            <img src={p.image} alt='Product image' width='350px' />
-          </div>
+          <ProductPhoto image={p.image} productName={p.productName} />
           <div>{p.category}</div>
           <div>{p.productName}</div>
           <div>{p.producent}</div>
@@ -42,7 +32,6 @@ const mapStateToProps = ({ productList }) => {
 
 const mapDispatchToProps = dispatch => ({
   deleteProductbyId: id => dispatch(deleteProduct(id)),
-  updateProductbyId: (id, data) => dispatch(updateProduct({ id, data })),
   addToFavouriteById: id => dispatch(addToFavourite(id)),
 });
 
