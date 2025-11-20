@@ -1,0 +1,113 @@
+$font-stack: 'Montserrat', sans-serif;
+$main-color: #6e5f5b;
+$background-color: #f8f9fa;
+
+.pageContainer {
+  min-height: 100vh;
+  background-color: $background-color;
+  padding: 40px 20px;
+  font-family: $font-stack;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, $main-color 0%, #8a7873 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.pageTitle {
+  font-family: $font-stack;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pageSubtitle {
+  font-family: $font-stack;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.formSection {
+  margin-bottom: 60px;
+}
+
+@media (max-width: 1024px) {
+  .pageContainer {
+    padding: 30px 15px;
+  }
+
+  .pageTitle {
+    font-size: 2rem;
+  }
+
+  .pageSubtitle {
+    font-size: 1rem;
+  }
+
+  .pageHeader {
+    margin-bottom: 40px;
+    padding: 25px 15px;
+  }
+
+  .formSection {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 20px 10px;
+  }
+
+  .pageTitle {
+    font-size: 1.75rem;
+  }
+
+  .pageSubtitle {
+    font-size: 0.95rem;
+  }
+
+  .pageHeader {
+    margin-bottom: 30px;
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .formSection {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContainer {
+    padding: 15px 10px;
+  }
+
+  .pageTitle {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .pageSubtitle {
+    font-size: 0.9rem;
+  }
+
+  .pageHeader {
+    margin-bottom: 25px;
+    padding: 15px 10px;
+  }
+
+  .formSection {
+    margin-bottom: 30px;
+  }
+}
