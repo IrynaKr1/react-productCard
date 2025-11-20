@@ -2,22 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
 import { addToFavourite, deleteProduct } from '../../store/slices/productSlice';
-import ProductPhoto from '../ProductPhoto';
-import ProductText from '../ProductText';
 import '../../../reset.css';
+import ProductCard from '../ProductCard';
 
 function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
   return (
     <ul>
       {products.map(p => (
         <li key={p.id}>
-          <ProductPhoto image={p.image} productName={p.productName} />
-          <ProductText
-            category={p.category}
-            productName={p.productName}
-            producent={p.producent}
-            price={p.price}
-          />
+          <ProductCard product={p} />
           <button onClick={() => deleteProductbyId(p.id)}>
             <MdDelete />
           </button>
