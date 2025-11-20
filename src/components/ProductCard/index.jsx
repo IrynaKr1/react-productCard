@@ -1,9 +1,10 @@
-import React from 'react';
+import { connect } from 'react-redux';
+import ProductButtons from '../ProductButtons';
 import ProductPhoto from '../ProductPhoto';
 import ProductText from '../ProductText';
 import styles from './ProductCard.module.scss';
 
-function ProductCard ({ product }) {
+function ProductCard ({ product, onDelete, onAddToFavourite }) {
   return (
     <>
       <main className={styles.productCard}>
@@ -14,6 +15,14 @@ function ProductCard ({ product }) {
           producent={product.producent}
           price={product.price}
         />
+        <div className={styles.discriptionStyle}>
+          <ProductButtons
+            productId={product.id}
+            onDelete={onDelete}
+            onAddToFavourite={onAddToFavourite}
+            isFavourite={product.isFavourite}
+          />
+        </div>
       </main>
     </>
   );

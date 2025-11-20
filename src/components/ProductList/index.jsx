@@ -1,6 +1,4 @@
-import React from 'react';
 import { connect } from 'react-redux';
-import { MdDelete } from 'react-icons/md';
 import { addToFavourite, deleteProduct } from '../../store/slices/productSlice';
 import '../../../reset.css';
 import ProductCard from '../ProductCard';
@@ -10,13 +8,11 @@ function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
     <ul>
       {products.map(p => (
         <li key={p.id}>
-          <ProductCard product={p} />
-          <button onClick={() => deleteProductbyId(p.id)}>
-            <MdDelete />
-          </button>
-          <button onClick={() => addToFavouriteById(p.id)}>
-            Add to favourite
-          </button>
+          <ProductCard
+            product={p}
+            onDelete={deleteProductbyId}
+            onAddToFavourite={addToFavouriteById}
+          />
         </li>
       ))}
     </ul>
