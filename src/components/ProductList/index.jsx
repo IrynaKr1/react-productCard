@@ -2,20 +2,23 @@ import { connect } from 'react-redux';
 import { addToFavourite, deleteProduct } from '../../store/slices/productSlice';
 import '../../../reset.css';
 import ProductCard from '../ProductCard';
+import styles from './ProductList.module.scss';
 
 function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
   return (
-    <ul>
-      {products.map(p => (
-        <li key={p.id}>
-          <ProductCard
-            product={p}
-            onDelete={deleteProductbyId}
-            onAddToFavourite={addToFavouriteById}
-          />
-        </li>
-      ))}
-    </ul>
+    <main className={styles.listStyle}>
+      <ul className={styles.unorderedList}>
+        {products.map(p => (
+          <li key={p.id}>
+            <ProductCard
+              product={p}
+              onDelete={deleteProductbyId}
+              onAddToFavourite={addToFavouriteById}
+            />
+          </li>
+        ))}
+      </ul>
+    </main>
   );
 }
 

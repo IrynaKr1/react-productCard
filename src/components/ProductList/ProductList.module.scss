@@ -1,0 +1,15 @@
+.listStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  .unorderedList {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 15px;
+  }
+}
