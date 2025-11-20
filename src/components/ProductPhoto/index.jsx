@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ProductPhoto.module.scss';
+import '../../../reset.css';
 
 function ProductPhoto ({ image, productName }) {
   return (

@@ -3,6 +3,7 @@ import React from 'react';
 import { PRODUCT_VALIDATION_SCHEMA } from '../../utils/validationSchemas';
 import { connect } from 'react-redux';
 import { createProduct } from '../../store/slices/productSlice';
+import '../../../reset.css';
 
 function ProductForm ({ createNewProduct }) {
   const initialValues = {

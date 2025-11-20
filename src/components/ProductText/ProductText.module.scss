@@ -1,0 +1,36 @@
+$font-stack: 'Montserrat', sans-serif;
+$main-color: #6e5f5b;
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.categoryText {
+  font-family: $font-stack;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: $main-color;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem;
+  }
+}
+
+.cardText {
+  font-family: $font-stack;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
+}

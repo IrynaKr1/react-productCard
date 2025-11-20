@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { MdDelete } from 'react-icons/md';
 import { addToFavourite, deleteProduct } from '../../store/slices/productSlice';
 import ProductPhoto from '../ProductPhoto';
+import ProductText from '../ProductText';
+import '../../../reset.css';
 
 function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
   return (
@@ -10,10 +12,12 @@ function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
       {products.map(p => (
         <li key={p.id}>
           <ProductPhoto image={p.image} productName={p.productName} />
-          <div>{p.category}</div>
-          <div>{p.productName}</div>
-          <div>{p.producent}</div>
-          <div>{p.price} zł</div>
+          <ProductText
+            category={p.category}
+            productName={p.productName}
+            producent={p.producent}
+            price={p.price}
+          />
           <button onClick={() => deleteProductbyId(p.id)}>
             <MdDelete />
           </button>
