@@ -1,10 +1,11 @@
 .imgContainer {
   max-width: 350px;
-  height: auto;
+  max-height: 270px;
 
   .img {
     width: 100%;
-    background-size: cover;
-    border-radius: 5px 5px 0 0;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
   }
 }
