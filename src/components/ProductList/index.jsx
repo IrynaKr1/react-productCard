@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import { addToFavourite, deleteProduct } from '../../store/slices/productSlice';
-import '../../../reset.css';
 import ProductCard from '../ProductCard';
 import styles from './ProductList.module.scss';
 

@@ -2,7 +2,6 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { PRODUCT_VALIDATION_SCHEMA } from '../../utils/validationSchemas';
 import { connect } from 'react-redux';
 import { createProduct } from '../../store/slices/productSlice';
-import '../../../reset.css';
 import styles from './ProductForm.module.scss';
 
 function ProductForm ({ createNewProduct }) {

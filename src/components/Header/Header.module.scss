@@ -1,0 +1,53 @@
+$font-stack: 'Montserrat', sans-serif;
+$main-color: #6e5f5b;
+$border-color: #ddd;
+$button-color: #6e5f5b;
+$button-hover: #5a4d49;
+$header-padding: 0.625rem;
+
+.header {
+  background-color: $main-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  min-height: 70px;
+}
+
+.imgContainer {
+  width: 150px;
+  padding: $header-padding;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.navigationBar {
+  display: flex;
+  align-items: stretch;
+}
+
+.navigationList {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+.linkElement {
+  color: $border-color;
+  text-align: center;
+  font-family: $font-stack;
+  font-weight: 600;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover;
+  }
+}

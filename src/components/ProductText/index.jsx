@@ -1,5 +1,4 @@
 import styles from './ProductText.module.scss';
-import '../../../reset.css';
 
 function ProductText ({ category, productName, producent, price }) {
   return (

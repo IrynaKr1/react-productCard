@@ -1,17 +1,30 @@
-import React from 'react';
+import { Link } from 'react-router';
+import ProductList from '../../components/ProductList';
 import styles from './Header.module.scss';
 
 function Header () {
   return (
-    <header>
+    <header className={styles.header}>
       <div className={styles.imgContainer}>
         <img src='logoipsum-336.svg' alt='Logo image' />
       </div>
       <nav className={styles.navigationBar}>
-        <ul>
-          <li>Products</li>
-          <li>Add Product</li>
-          <li>Users</li>
+        <ul className={styles.navigationList}>
+          <li>
+            <Link to='/products' className={styles.linkElement}>
+              Products
+            </Link>
+          </li>
+          <li>
+            <Link to='/admin' className={styles.linkElement}>
+              Add Products
+            </Link>
+          </li>
+          <li>
+            <Link to='/users' className={styles.linkElement}>
+              Users
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>
