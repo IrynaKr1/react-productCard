@@ -17,7 +17,7 @@ function MainPage () {
             <Route path='/users' element={<div>Users Page - TODO</div>} />
           </Routes>
         </main>
-        <Footer />
+        <Footer className={styles.footer}/>
       </div>
     </>
   );

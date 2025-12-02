@@ -9,12 +9,14 @@ function ProductCard ({ product, onDelete, onAddToFavourite }) {
     <>
       <main className={styles.productCard}>
         <ProductPhoto image={product.image} productName={product.productName} />
-        <ProductText
-          category={product.category}
-          productName={product.productName}
-          producent={product.producent}
-          price={product.price}
-        />
+        <div className={styles.cardContent}>
+          <ProductText
+            category={product.category}
+            productName={product.productName}
+            producent={product.producent}
+            price={product.price}
+          />
+        </div>
         <div className={styles.discriptionStyle}>
           <ProductButtons
             productId={product.id}

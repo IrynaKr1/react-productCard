@@ -4,9 +4,8 @@ $main-color: #6e5f5b;
 .textContainer {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  padding-left: 10px;
-  padding-bottom: 5px;
+  gap: 0.25rem;
+  flex: 1;
 }
 
 .categoryText {
@@ -14,6 +13,8 @@ $main-color: #6e5f5b;
   font-weight: 700;
   font-size: 1.25rem;
   color: $main-color;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
 
   @media (max-width: 768px) {
     font-size: 1rem;

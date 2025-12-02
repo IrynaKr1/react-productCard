@@ -1,15 +1,37 @@
 .listStyle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px;
+  padding: 2rem;
+  width: 100%;
+  min-height: calc(100vh - 70px);
 
   .unorderedList {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0;
+    li {
+      display: flex;
+      min-height: 450px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+
+    .unorderedList {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+
+    .unorderedList {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 }
