@@ -1,0 +1,12 @@
+$font-stack: 'Montserrat', sans-serif;
+$main-color: #6e5f5b;
+$border-color: #ddd;
+
+.footer {
+  background-color: $main-color;
+  color: $border-color;
+  font-family: $font-stack;
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+}
