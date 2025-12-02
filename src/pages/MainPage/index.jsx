@@ -1,7 +1,8 @@
 import { Routes, Route } from 'react-router';
-import Header from '../../components/Header';
 import styles from './MainPage.module.scss';
+import Header from '../../components/Header';
 import ProductList from '../../components/ProductList';
+import ProductForm from '../../components/ProductForm';
 import Footer from '../../components/Footer';
 
 function MainPage () {
@@ -13,7 +14,7 @@ function MainPage () {
           <Routes>
             <Route path='/' element={<div>Home Page - TODO</div>} />
             <Route path='/products' element={<ProductList />} />
-            <Route path='/admin' element={<div>Add Product Page - TODO</div>} />
+            <Route path='/admin' element={<ProductForm />} />
             <Route path='/users' element={<div>Users Page - TODO</div>} />
           </Routes>
         </main>
