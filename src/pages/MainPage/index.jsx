@@ -4,6 +4,7 @@ import Header from '../../components/Header';
 import ProductList from '../../components/ProductList';
 import ProductForm from '../../components/ProductForm';
 import Footer from '../../components/Footer';
+import UsersList from '../../components/UsersList';
 
 function MainPage () {
   return (
@@ -15,10 +16,10 @@ function MainPage () {
             <Route path='/' element={<div>Home Page - TODO</div>} />
             <Route path='/products' element={<ProductList />} />
             <Route path='/admin' element={<ProductForm />} />
-            <Route path='/users' element={<div>Users Page - TODO</div>} />
+            <Route path='/users' element={<UsersList />} />
           </Routes>
         </main>
-        <Footer className={styles.footer}/>
+        <Footer className={styles.footer} />
       </div>
     </>
   );
