@@ -1,4 +1,3 @@
-import { connect } from 'react-redux';
 import ProductButtons from '../ProductButtons';
 import ProductPhoto from '../ProductPhoto';
 import ProductText from '../ProductText';
