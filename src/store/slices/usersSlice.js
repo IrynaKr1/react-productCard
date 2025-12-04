@@ -1,9 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-const axiosInstance = axios.create({
-  baseURL: 'https://randomuser.me/api',
-});
+import * as API from '../../api';
 
 const initialState = {
   users: [],
@@ -15,7 +11,7 @@ export const getUsersThunk = createAsyncThunk(
   'users/getUsers',
   async (payload, thunkAPI) => {
     try {
-      const { data } = await axiosInstance.get('/?page=3&results=10');
+      const { data } = await API.getUsers();
       console.log('data', data);
       return data;
     } catch (err) {
