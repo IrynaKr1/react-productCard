@@ -1,0 +1,18 @@
+$font-stack: 'Montserrat', sans-serif;
+
+.listElement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-stack;
+}
+
+.imgContainer {
+  padding: 10px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
