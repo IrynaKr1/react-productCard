@@ -5,7 +5,7 @@ import styles from './ProductList.module.scss';
 
 function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
   return (
-    <main className={styles.listStyle}>
+    <section className={styles.listStyle}>
       <ul className={styles.unorderedList}>
         {products.map(p => (
           <li key={p.id}>
@@ -17,7 +17,7 @@ function ProductList ({ products, deleteProductbyId, addToFavouriteById }) {
           </li>
         ))}
       </ul>
-    </main>
+    </section>
   );
 }
 

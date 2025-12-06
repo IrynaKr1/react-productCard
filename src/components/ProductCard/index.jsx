@@ -6,7 +6,7 @@ import styles from './ProductCard.module.scss';
 function ProductCard ({ product, onDelete, onAddToFavourite }) {
   return (
     <>
-      <main className={styles.productCard}>
+      <article className={styles.productCard}>
         <ProductPhoto image={product.image} productName={product.productName} />
         <div className={styles.cardContent}>
           <ProductText
@@ -24,7 +24,7 @@ function ProductCard ({ product, onDelete, onAddToFavourite }) {
             isFavourite={product.isFavourite}
           />
         </div>
-      </main>
+      </article>
     </>
   );
 }
